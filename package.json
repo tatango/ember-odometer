@@ -1,6 +1,6 @@
 {
   "name": "ember-odometer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Wraps odometer.js in an Ember component",
   "directories": {
     "doc": "doc",

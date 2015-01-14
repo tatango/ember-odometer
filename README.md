@@ -14,7 +14,7 @@ When `counter` changes, the div output by this component will animate to the new
 
 From your ember-cli app's directory:
 
-`ember install:npm ember-odometer`
+`ember install:npm ember-odometer` or `npm install ember-odometer --save-dev && ember generate ember-odometer` 
 
 ## Running the Dummy App
 
