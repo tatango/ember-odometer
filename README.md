@@ -8,6 +8,8 @@ This addon wraps [odometer.js](http://github.hubspot.com/odometer/) in a compone
 
 When `counter` changes, the div output by this component will animate to the new value.
 
+[![Build Status](https://travis-ci.org/plyfe/ember-odometer.svg?branch=master)](https://travis-ci.org/plyfe/ember-odometer)
+
 ## Installation
 
 From your ember-cli app's directory:
