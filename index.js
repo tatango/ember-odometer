@@ -1,17 +1,26 @@
-/* jshint node: true */
+/* eslint-env node */
 'use strict';
 
 module.exports = {
   name: 'ember-odometer',
-  included: function(app) {
-    app.import({
-      development: app.bowerDirectory + '/odometer/odometer.js',
-      production: app.bowerDirectory + '/odometer/odometer.min.js'
+
+  included: function(app, parentAddon) {
+    let target = (parentAddon || app);
+    target.options = target.options || {};
+
+    target.import({
+      development: target.bowerDirectory + '/odometer/odometer.js',
+      production: target.bowerDirectory + '/odometer/odometer.min.js'
     });
-    var theme = 'default';
-    if (app.odometer && app.odometer.theme) {
-     theme = app.odometer.theme;
+
+    let theme = 'default';
+
+    if (target.options.odometer && target.options.odometer.theme) {
+     theme = target.options.odometer.theme;
     }
-    app.import(app.bowerDirectory + '/odometer/themes/odometer-theme-' + theme + '.css');
+
+    target.import(target.bowerDirectory + '/odometer/themes/odometer-theme-' + theme + '.css');
+
+    return this._super.included.apply(this, arguments);
   }
 };
